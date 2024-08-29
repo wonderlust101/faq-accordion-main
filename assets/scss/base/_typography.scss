@@ -1,6 +1,33 @@
 @use '../abstract' as a;
 
 h1, h2, h3, h4,
-h5, h6, p {
+h5, h6, p, button {
+  font-family: 'Work Sans', sans-serif;
+}
 
+h1 {
+  font-size: 2.25rem;
+  color: var(--clr-primary-color-dark-purple);
+
+  @include a.breakpoint(medium) {
+    font-size: 3.25rem;
+  }
+}
+
+button {
+  font-size: 1.10rem;
+  line-height: 1.25;
+  font-weight: 700;
+  text-align: left;
+  color: var(--clr-primary-color-dark-purple);
+}
+
+p {
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--clr-primary-color-grayish-purple);
+}
+
+li {
+  list-style: none;
 }

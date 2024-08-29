@@ -1,0 +1,26 @@
+@use '../abstract' as a;
+
+.accordion {
+  display: grid;
+  gap: 1.25rem;
+
+  & > *:not(:last-of-type) {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--clr-primary-color-light-pink);
+  }
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.15s ease-out, margin-top 0.15s;
+  }
+}

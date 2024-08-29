@@ -1,0 +1,24 @@
+@use '../abstract' as a;
+
+.card {
+  display: grid;
+  gap: 1.5rem;
+  width: min(95%, 50rem);
+  padding: 2.5rem;
+  background-color: var(--clr-white);
+  border-radius: 1rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__star {
+    width: 1.75rem;
+
+    @include a.breakpoint(medium) {
+      width: 2.5rem;
+    }
+  }
+}

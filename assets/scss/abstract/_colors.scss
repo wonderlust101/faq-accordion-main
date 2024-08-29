@@ -2,15 +2,12 @@
 $colors: (
   // Main Colors
         primary-color: (
-                'star-dust': #f9f3dd,
-                'crackled': #f2e7d1,
-                'neon-spring': #3ffd6a,
-                'iris-royale': #591b98,
-                'fading-horizon': #442266,
-                'election-night': #110320,
+                'light-pink': hsl(275, 100%, 97%),
+                'grayish-purple': hsl(292, 16%, 49%),
+                'dark-purple': hsl(292, 42%, 14%),
         ),
   // Other
-        'background': #fafafa,
-        'white': #ffffff,
-        'black': #000000,
+        'background': hsl(275, 100%, 97%),
+        'white': hsl(0, 0%, 100%),
+        'black': hsl(0, 0%, 0%),
 );
