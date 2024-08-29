@@ -1,7 +1,7 @@
 let accordion = document.getElementsByClassName('accordion__question');
 
 for (let i = 0; i < accordion.length; i++) {
-    let panel = accordion[i].nextElementSibling;
+    let panel = accordion[i].parentElement.nextElementSibling;
 
     // Opens the first question by default
     if (panel.getAttribute('aria-hidden') === 'false') {
@@ -24,7 +24,7 @@ for (let i = 0; i < accordion.length; i++) {
 function closeAllAccordions(activePanel) {
     for (let i = 0; i < accordion.length; i++) {
         if (accordion[i] !== activePanel) {
-            let panel = accordion[i].nextElementSibling;
+            let panel = accordion[i].parentElement.nextElementSibling;
             let icon = accordion[i].querySelector('img');
 
             accordion[i].setAttribute('aria-expanded', 'false');
@@ -41,7 +41,7 @@ function closeAllAccordions(activePanel) {
  * Return: None
  */
 function toggleAccordion(activePanel) {
-    let panel = activePanel.nextElementSibling;
+    let panel = activePanel.parentElement.nextElementSibling;
     let icon = activePanel.querySelector('img');
     let isExpanded = activePanel.getAttribute('aria-expanded') === 'true';
 
